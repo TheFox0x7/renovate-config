@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "github-actions": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "groupName": "workflow dependencies",
+      "matchManagers": ["github-actions"]
+    }
+  ]
+}
