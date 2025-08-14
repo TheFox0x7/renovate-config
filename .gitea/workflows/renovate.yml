@@ -6,6 +6,7 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   renovate:
@@ -22,4 +23,3 @@ jobs:
           GITHUB_COM_TOKEN: ${{ secrets.GH_TOKEN }}
           HUB_DOCKER_COM_USER: ${{ secrets.HUB_DOCKER_COM_USER }}
           HUB_DOCKER_COM_TOKEN: ${{ secrets.HUB_DOCKER_COM_TOKEN }}
-
