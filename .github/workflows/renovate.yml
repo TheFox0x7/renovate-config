@@ -11,15 +11,23 @@ on:
 jobs:
   renovate:
     runs-on: ubuntu-latest
-    container: ghcr.io/renovatebot/renovate:41.18.1
+    container: ghcr.io/renovatebot/renovate:42
     steps:
+      - name: Get token
+        id: get_token
+        uses: actions/create-github-app-token@v1
+        with:
+          private-key: ${{ secrets.private_key }}
+          app-id: ${{ secrets.app_id }}
+          owner: ${{ github.repository_owner }}
+          repositories: "gitea"
       - uses: actions/checkout@v4
       - run: renovate
         env:
-          RENOVATE_CONFIG_FILE: "/workspace/gitea/renovate-config/config.js"
+          RENOVATE_CONFIG_FILE: econfig.js"
           LOG_LEVEL: "debug"
           RENOVATE_CONFIG_MIGRATION: "true" # ensure all repositories receive config migration PRs
-          RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
+          RENOVATE_TOKEN: ${{ steps.get_token.outputs.token }}
           GITHUB_COM_TOKEN: ${{ secrets.GH_TOKEN }}
           HUB_DOCKER_COM_USER: ${{ secrets.HUB_DOCKER_COM_USER }}
           HUB_DOCKER_COM_TOKEN: ${{ secrets.HUB_DOCKER_COM_TOKEN }}
