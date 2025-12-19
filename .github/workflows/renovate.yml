@@ -1,8 +1,8 @@
 name: renovate
 
 on:
-  schedule:
-    - cron: "@daily"
+  # schedule:
+  #   - cron: "@daily"
   push:
     branches:
       - main
