@@ -9,7 +9,7 @@ module.exports = {
   // "autodiscover": true,
   // "autodiscoverFilter": ["gitea/*"],
   "optimizeForDisabled": true,
-  "forkProcessing": "disabled",
+  "forkProcessing": "enabled",
   "dryRun": null,
   "binarySource": "install",
   // "hostRules": [
