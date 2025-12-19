@@ -4,7 +4,7 @@ module.exports = {
   "platform": "github",
   "onboardingConfigFileName": "renovate.json5",
   "repositories": [
-    "gitea"
+    "thefox0x7/gitea"
   ],
   // "autodiscover": true,
   // "autodiscoverFilter": ["gitea/*"],
