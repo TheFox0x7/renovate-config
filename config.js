@@ -1,7 +1,7 @@
 module.exports = {
   // "endpoint": "https://gitea.com/api/v1",
   "gitAuthor": "Renovate Bot <renovate-bot@gitea.com>",
-  // "platform": "gitea",
+  "platform": "github",
   "onboardingConfigFileName": "renovate.json5",
   "repositories": [
     "gitea"
@@ -12,13 +12,13 @@ module.exports = {
   "forkProcessing": "disabled",
   "dryRun": null,
   "binarySource": "install",
-  "hostRules": [
-    {
-      "matchHost": "docker.io",
-      "username": process.env.HUB_DOCKER_COM_USER,
-      "password": process.env.HUB_DOCKER_COM_TOKEN
-    }
-  ],
+  // "hostRules": [
+  //   {
+  //     "matchHost": "docker.io",
+  //     "username": process.env.HUB_DOCKER_COM_USER,
+  //     "password": process.env.HUB_DOCKER_COM_TOKEN
+  //   }
+  // ],
   // "allowedPostUpgradeCommands": [
   //   // [gitea/helm-chart] Update README.md on dependency changes in values.yaml
   //   "install-tool node",
